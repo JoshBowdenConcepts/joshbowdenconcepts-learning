@@ -3,7 +3,7 @@
 	"version": "1.0.0",
 	"main": "index.js",
 	"repository": "git@github.com:JoshBowdenConcepts/joshbowdenconcepts.com.git",
-	"homepage": "https://joshbowdenconcepts.github.io/joshbowdenconcepts.com/",
+	"homepage": "https://JoshBowdenConcepts.github.io/joshbowdenconcepts.com/",
 	"author": "josh bowden <joshbowdenconcepts@gmail.com>",
 	"license": "MIT",
 	"scripts": {
