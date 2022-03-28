@@ -32,20 +32,6 @@ module.exports = {
 				test: /\.(woff(2)?|eot|ttf|otf|svg|)$/,
 				type: 'asset/inline',
 			},
-			{
-				test: /\.(ts|tsx)$/,
-				enforce: 'pre',
-				use: [
-				  {
-						options: {
-					  eslintPath: require.resolve('eslint'),
-			
-						},
-						loader: require.resolve('eslint-loader'),
-				  },
-				],
-				exclude: /node_modules/,
-			  },
 		],
 	},
 	resolve: {

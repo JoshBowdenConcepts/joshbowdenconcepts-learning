@@ -9,7 +9,8 @@
 	"scripts": {
 		"start": "webpack serve --config webpack.config.js --env env=development",
 		"build": "webpack --config webpack.config.js --env env=production",
-		"lint": "eslint --fix \"./src/**/*.{js,jsx,ts,tsx,json}\"",
+		"lint": "eslint",
+		"lint:fix": "eslint --fix \"./src/**/*.{js,jsx,ts,tsx,json}\"",
 		"predeploy": "yarn build",
 		"deploy": "gh-pages -d dist"
 	},
