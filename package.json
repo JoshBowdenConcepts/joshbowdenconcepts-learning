@@ -10,7 +10,8 @@
 		"start": "webpack serve --config webpack.config.js --env env=development",
 		"build": "webpack --config webpack.config.js --env env=production",
 		"lint": "eslint",
-		"lint:fix": "eslint --fix \"./src/**/*.{js,jsx,ts,tsx,json}\""
+		"lint:fix": "eslint --fix \"./src/**/*.{js,jsx,ts,tsx,json}\"",
+		"deploy": "firebase deploy"
 	},
 	"dependencies": {
 		"firebase": "^9.6.10",
