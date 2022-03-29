@@ -1,7 +1,10 @@
+import { Nav } from './Nav/Nav.component'
+
 export const App = () => {
 	return (
 		<>
-			<h1>JoshBowdenConcepts - What I Have Learned</h1>
+			<Nav brand={{name: 'JoshBowdenConcepts'}} />
 		</>
 	);
 };
+
