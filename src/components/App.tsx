@@ -1,10 +1,9 @@
-import { Nav } from './Nav/Nav'
+import { Nav } from './Nav/Nav.component'
 
 export const App = () => {
 	return (
 		<>
 			<Nav brand={{name: 'JoshBowdenConcepts'}} />
-			<h1>JoshBowdenConcepts - What I Have Learned</h1>
 		</>
 	);
 };
