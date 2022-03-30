@@ -1,18 +1,30 @@
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Button } from '../Button/Button.component'
 import { NavProps } from './Nav.types'
-import { NavContainer, MainNavigation } from './Nav.styles'
+import { NavContainer, MainNavigation, Logo } from './Nav.styles'
 
 export const Nav = ({ brand, ...props }: NavProps) => {
 	const [sticky, setSticky] = useState(false);
 	const container = useRef<HTMLDivElement>(null);
 
+	useEffect(() => {
+		window.addEventListener("scroll", handleScroll)
+	})
+
+	const handleScroll = () => {
+		if (window.pageYOffset > 65) {
+			setSticky(true);
+		} else {
+			setSticky(false)
+		}
+	}
+
 	return <NavContainer sticky={sticky}>
 		<MainNavigation {...props} ref={container}>
-			<a href="/">
+			<a href="/" aria-label="Home Link">
 				{
 					brand.logo
-						? <img src="https://picsum.photos/150/50" alt={brand.name}></img>
+						? <Logo src={brand.logo} alt={brand.name}></Logo>
 						: <Button>{brand.name}</Button>
 				}
 			</a>
